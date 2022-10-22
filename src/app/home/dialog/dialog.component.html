@@ -1,0 +1,26 @@
+
+<h1 mat-dialog-title>Edit Employee</h1>
+<div mat-dialog-content>
+        <p>Enter Employee Name</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Your name</mat-label>
+    <input matInput [(ngModel)]="data.name" name="name">
+  </mat-form-field>
+  <p>Enter Employee Email</p>
+  <mat-form-field appearance="fill">
+    <mat-label>email</mat-label>
+    <input matInput [(ngModel)]="data.email"name="email">
+  </mat-form-field>
+
+  <p>Enter Employee Employee id</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Your id</mat-label>
+    <input matInput [(ngModel)]="data.empid"name="empid">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Edit</button>
+</div>
